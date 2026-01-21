@@ -1,0 +1,5 @@
+prepros.config
+/dist/
+acf-blocks/*/assets/css/*
+/node_modules/
+.git/

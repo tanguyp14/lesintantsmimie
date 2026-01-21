@@ -1,0 +1,50 @@
+// Hamburger menu
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 20px;
+    border: none;
+    line-height: 1;
+    &:hover {
+        cursor: pointer;
+    }
+    span,
+    span::before,
+    span::after {
+        width: 1.125rem;
+        border-radius: 0.125rem;
+        background-color: $black;
+        transition: .5s cubic-bezier(.19,1,.22,1);
+    }
+    span {
+        display: block;
+        position: relative;
+        height: .125rem;
+        margin-left: .2rem;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        &::before {
+            transform: translateY(-0.3125rem);
+            .header--menu-is-open & {
+                transform: rotate(-135deg);
+            }
+        }
+        &::after {
+            transform: translateY(0.3125rem);
+            .header--menu-is-open & {
+                transform: rotate(135deg);
+            }
+        }
+        .header--menu-is-open & {
+            background-color: transparent;
+        }
+    }
+}
