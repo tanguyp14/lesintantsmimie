@@ -7,7 +7,7 @@ get_header();
 
 ?>
 
-<code>front-page.php</code>
+<!-- <code>front-page.php</code> -->
 
 <?php
     the_content();

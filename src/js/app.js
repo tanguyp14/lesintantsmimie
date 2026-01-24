@@ -11,7 +11,15 @@
     });
 
     $(window).scroll(function(){
-        // Do things...
+        // Header scroll behavior
+        var scrollPosition = $(window).scrollTop();
+        var scrollThreshold = window.innerHeight * 0.5; // 50vh
+
+        if (scrollPosition > scrollThreshold) {
+            $('.header').addClass('header--scrolled');
+        } else {
+            $('.header').removeClass('header--scrolled');
+        }
     });
 
 }( jQuery ) );

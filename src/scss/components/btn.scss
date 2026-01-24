@@ -1,3 +1,22 @@
-button {
-    color: purple;
+.btn {
+  display: inline-block;
+  padding: 0.3125rem 1.875rem; // 5px 30px - Figma
+  background: $jaune; // #E5AB63
+  color: $noir; // #414141
+  text-decoration: none;
+  border-radius: 68px;
+  transition: all 0.3s ease;
+  font-family: $primary-font-family;
+  font-weight: 300;
+  font-size: 1.25rem; // 20px
+  font-style: italic;
+  line-height: 1.22;
+  text-transform: uppercase;
+  letter-spacing: 0;
+
+  &:hover {
+    background: $noir; // #414141
+    color: $jaune; // #E5AB63
+    letter-spacing: 0.1em; // 10% - Figma
+  }
 }

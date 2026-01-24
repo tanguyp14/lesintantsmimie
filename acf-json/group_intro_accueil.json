@@ -1,0 +1,115 @@
+{
+    "key": "group_intro_accueil",
+    "title": "Intro Accueil - Champs",
+    "fields": [
+        {
+            "key": "field_intro_accueil_background",
+            "label": "Image de fond",
+            "name": "background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image d'arrière-plan pour le bloc d'introduction",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_intro_accueil_logo",
+            "label": "Logo",
+            "name": "logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Logo à afficher au centre du bloc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_intro_accueil_titre",
+            "label": "Titre (H1)",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titre principal du bloc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Ex: Bienvenue sur notre site",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_intro_accueil_sous_titre",
+            "label": "Sous-titre",
+            "name": "sous_titre",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Sous-titre ou description courte",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "Ex: Découvrez notre univers...",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/intro-accueil"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Intro Accueil",
+    "show_in_rest": 0,
+    "display_title": ""
+}

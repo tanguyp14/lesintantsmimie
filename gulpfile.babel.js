@@ -18,7 +18,7 @@ const { src, dest, series, watch, parallel } = require('gulp'),
 
 const PRODUCTION = yargs.argv.prod;
 const server = browserSync.create();
-const url = 'http://TYLT.local/';
+const url = 'http://lesinstantmimie.local/';
 const paths = {
   styles: {
     src: ["./src/scss/*.scss", "./src/scss/**/*.scss"],
@@ -79,7 +79,7 @@ async function blockStyles() {
   return src(paths.blockStyles.src)
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([ autoprefixer("last 2 version"), cssnano({ zindex: false }) ]))
+    .pipe(postcss([ autoprefixer("last 2 version"), cssnano({ zindex: false, reduceIdents: false }) ]))
     .pipe(rename(function (file) {
       file.dirname = file.dirname.replace('scss', 'css');
     }))

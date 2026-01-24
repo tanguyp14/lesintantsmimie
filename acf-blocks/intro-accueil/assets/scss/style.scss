@@ -1,0 +1,67 @@
+@import '../../../../src/scss/abstracts/all.scss';
+// Call all variables
+
+.intro-accueil {
+    position: relative;
+    width: 100%;        
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoints(sm, max) {
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        margin-bottom: 3rem;
+
+        img {
+            max-width: 200px;
+            height: auto;
+            display: inline-block;
+
+            @include breakpoints(sm) {
+                max-width: 300px;
+            }
+        }
+    }
+
+    &__titre {
+        color: $blanc;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        @include breakpoints(sm, max) {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__sous-titre {
+        color: $blanc;
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin: 0;
+        line-height: 1.6;
+        font-family: $secondary-font-family;
+
+        @include breakpoints(sm, max) {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+    }
+}

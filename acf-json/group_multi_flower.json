@@ -1,0 +1,125 @@
+{
+    "key": "group_multi_flower",
+    "title": "Multi Flower - Champs",
+    "fields": [
+        {
+            "key": "field_multi_flower_fleur_1",
+            "label": "Fleur 1 (Haut gauche)",
+            "name": "fleur_1",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "SVG de la fleur 1 - Position: haut gauche",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_multi_flower_fleur_2",
+            "label": "Fleur 2 (Haut droite)",
+            "name": "fleur_2",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "SVG de la fleur 2 - Position: haut droite",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_multi_flower_fleur_3",
+            "label": "Fleur 3 (Bas gauche)",
+            "name": "fleur_3",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "SVG de la fleur 3 - Position: bas gauche",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_multi_flower_fleur_4",
+            "label": "Fleur 4 (Bas droite)",
+            "name": "fleur_4",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "SVG de la fleur 4 - Position: bas droite",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/multi-flower"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Multi Flower",
+    "show_in_rest": 0,
+    "display_title": ""
+}

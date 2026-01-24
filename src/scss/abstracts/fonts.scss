@@ -1,6 +1,9 @@
+// Google Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 // Font Family
-$primary-font-family: var(--wp--preset--font-family--primary-font);
-$secondary-font-family: var(--wp--preset--font-family--secondary-font);
+$primary-font-family: 'Montserrat', sans-serif;
+$secondary-font-family: 'Gloria Hallelujah', cursive;
 
 // Font Size
 $base-font-size: 16px;

@@ -185,11 +185,11 @@
                     "name": "facebook",
                     "aria-label": "",
                     "type": "url",
-                    "instructions": "",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/facebook.svg",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -202,11 +202,11 @@
                     "name": "linkedin",
                     "aria-label": "",
                     "type": "url",
-                    "instructions": "",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/linkedin.svg",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -215,15 +215,15 @@
                 },
                 {
                     "key": "field_641d7167d1d68",
-                    "label": "Twitter",
+                    "label": "Twitter / X",
                     "name": "twitter",
                     "aria-label": "",
                     "type": "url",
-                    "instructions": "",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/twitter.svg",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -236,11 +236,96 @@
                     "name": "instagram",
                     "aria-label": "",
                     "type": "url",
-                    "instructions": "",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/instagram.svg",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_641d7188d1d6a",
+                    "label": "TikTok",
+                    "name": "tiktok",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/tiktok.svg",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_641d7190d1d6c",
+                    "label": "Pinterest",
+                    "name": "pinterest",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/pinterest.svg",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_641d7198d1d6d",
+                    "label": "Threads",
+                    "name": "threads",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/threads.svg",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_641d71a0d1d6e",
+                    "label": "Twitch",
+                    "name": "twitch",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/twitch.svg",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_641d71a8d1d6f",
+                    "label": "YouTube",
+                    "name": "youtube",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "L'icône sera chargée depuis src/img/icons/youtube.svg",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -505,6 +590,99 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_footer_group",
+            "label": "Footer",
+            "name": "footer",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "SVG décoratifs du footer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_footer_svg_1",
+                    "label": "SVG décoratif 1 (gauche haut)",
+                    "name": "svg_1",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Fleur_5 - Position gauche haut",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_footer_svg_2",
+                    "label": "SVG décoratif 2 (gauche)",
+                    "name": "svg_2",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Branche_1 - Position gauche",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_footer_svg_3",
+                    "label": "SVG décoratif 3 (droite)",
+                    "name": "svg_3",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Fleur_3 - Position droite (opacity 0.3)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg",
+                    "preview_size": "medium"
+                }
+            ]
         }
     ],
     "location": [
@@ -512,7 +690,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "ng1"
+                "value": "theme-general-settings"
             }
         ]
     ],
@@ -525,5 +703,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701352183
+    "display_title": "",
+    "modified": 1769002082
 }

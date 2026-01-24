@@ -1,0 +1,43 @@
+// Animation Fleur 1 - 10 secondes
+@keyframes flower-sway-1 {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+// Animation Fleur 2 - 20 secondes
+@keyframes flower-sway-2 {
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+// Animation Fleur 3 - 15 secondes
+@keyframes flower-sway-3 {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+
+// Animation Fleur 4 - 10 secondes
+@keyframes flower-sway-4 {
+  0%,
+  100% {
+    transform: rotate(-7deg);
+  }
+  50% {
+    transform: rotate(7deg);
+  }
+}

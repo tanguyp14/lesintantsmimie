@@ -1,0 +1,244 @@
+@import "../abstracts/all";
+
+.footer {
+  position: relative;
+  margin-top: 14rem;
+  overflow: hidden;
+
+  // Fond avec border-radius
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 299px;
+    background: $noir;
+    border-radius: 30px 30px 0 0;
+    z-index: 0;
+  }
+
+  // SVG décoratifs
+  &__svg {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    // Fleur_5 - gauche haut
+    &--1 {
+      left: -9%;
+      bottom: 0;
+      width: 27%;
+      animation: flower-sway-1 15s ease-in-out infinite;
+
+      @include breakpoints(md, max) {
+        display: none;
+      }
+    }
+
+    // Branche_1 - gauche
+    &--2 {
+      left: -18%;
+      bottom: -12%;
+      width: 40%;
+      animation: flower-sway-2 20s ease-in-out infinite;
+
+      @include breakpoints(md, max) {
+        display: none;
+      }
+    }
+
+    // Fleur_3 - droite (opacity 0.3)
+    &--3 {
+      right: -5%;
+      bottom: -10%;
+      width: 28%;
+      opacity: 0.3;
+      animation: flower-sway-3 18s ease-in-out infinite;
+
+      @include breakpoints(md, max) {
+        display: none;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+
+    @include breakpoints(md, max) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+    }
+  }
+
+  // Infos contact
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__title {
+    font-family: $secondary-font-family;
+    font-weight: 400;
+    font-size: 1.875rem; // 30px
+    line-height: 1.98;
+    color: $blanc;
+    margin: 0;
+  }
+
+  &__link {
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 1.25rem; // 20px
+    line-height: 1.22;
+    color: $blanc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $jaune;
+    }
+  }
+
+  // Séparateur vertical
+  &__separator {
+    width: 1px;
+    height: 138px;
+    background: $blanc;
+    align-self: center;
+
+    @include breakpoints(md, max) {
+      width: 100px;
+      height: 1px;
+    }
+  }
+
+  // Menu
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      font-family: $primary-font-family;
+      font-weight: 400;
+      font-size: 1.25rem; // 20px
+      line-height: 1.22;
+      color: $blanc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $jaune;
+      }
+    }
+  }
+
+  // Réseaux sociaux
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+
+    @include breakpoints(md, max) {
+      align-items: center;
+    }
+  }
+
+  &__social-text {
+    font-family: $secondary-font-family;
+    font-weight: 400;
+    font-size: 1.25rem; // 20px
+    line-height: 1.98;
+    color: $blanc;
+    margin: 0;
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  &__social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    transition: transform 0.3s ease;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $jaune;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // Copyright
+  &__bottom {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 1rem 2rem 1.5rem;
+
+    p {
+      font-family: $primary-font-family;
+      font-weight: 300;
+      font-size: 0.625rem; // 10px
+      line-height: 1.22;
+      color: $blanc;
+      text-transform: uppercase;
+      margin: 0;
+
+      a {
+        color: $blanc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $jaune;
+        }
+      }
+    }
+  }
+}
+
+// Bouton retour en haut
+.back-top {
+  display: none; // À personnaliser si besoin
+}

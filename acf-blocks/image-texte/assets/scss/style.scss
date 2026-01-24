@@ -1,0 +1,196 @@
+@import "../../../../src/scss/abstracts/all.scss";
+
+.image-texte {
+  padding: 4rem 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @include breakpoints(md, max) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 2;
+    width: 73%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      transform: rotate(-3deg);
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    pointer-events: none;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    // Branche_2 derrière (en haut à droite) - Figma: 165.28 x 453.96 @ (267, 142)
+    &--derriere-1 {
+      z-index: 1;
+      top: 18.4%;
+      left: 57.6%;
+      width: 30%;
+      rotate: 4deg;
+      transform-origin: bottom center;
+      animation: flower-sway-4 50s ease-in-out infinite;
+
+    }
+
+    // Fleur_4 devant 1 (en bas) - Figma: 341.51 x 343.96 @ (121, 319)
+    &--devant-1 {
+      z-index: 3;
+      top: 41.4%;
+      left: 53.6%;
+      width: 32%;
+      rotate: 352deg;
+    }
+
+    // Fleur_5 devant 2 (au milieu) - Figma: 267.34 x 387.54 @ (204, 237)
+    &--devant-2 {
+      z-index: 3;
+      top: 59.4%;
+      left: 50%;
+      width: 35%;
+      rotate: 346deg;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; // 10px - Figma
+    padding-bottom: 4.375rem; // 70px - Figma
+  }
+
+  &__texte {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; // 10px - Figma
+
+    h2 {
+      font-family: $secondary-font-family;
+      font-weight: 400;
+      font-size: 1.6rem; // 35px
+      line-height: 1.98;
+      color: $noir;
+      max-width: 789px;
+
+      @include breakpoints(md, max) {
+        font-size: 23px;
+      }
+    }
+
+    h3 {
+      font-family: $primary-font-family;
+      font-weight: 300;
+      font-size: 1.5625rem; // 25px
+      line-height: 1.22;
+      color: $noir;
+      max-width: 789px;
+      font-style: italic;
+      margin-bottom: 0;
+
+      @include breakpoints(md, max) {
+        font-size: 17px;
+      }
+    }
+
+    p {
+      font-family: $primary-font-family;
+      font-weight: 300;
+      font-size: 1.25rem; // 20px
+      line-height: 1.22;
+      color: $noir;
+      max-width: 692px;
+
+      strong {
+        font-weight: 500;
+      }
+
+      em {
+        font-style: italic;
+      }
+      @include breakpoints(md, max) {
+        font-size: 14px;
+      }
+    }
+
+    // Handwritten style
+    .handwritten {
+      font-family: $secondary-font-family;
+      font-weight: 400;
+      font-size: 1.25rem; // 20px
+      line-height: 1.98;
+    }
+  }
+
+
+  // Position de l'image à droite
+  &--droite {
+    .image-texte__container {
+      @include breakpoints(md) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include breakpoints(md, max) {
+        grid-template-columns: 1fr;
+
+        .image-texte__image-wrapper {
+          order: 1;
+        }
+
+        .image-texte__content {
+          order: 2;
+        }
+      }
+    }
+
+    @include breakpoints(md) {
+      .image-texte__image-wrapper {
+        order: 2;
+      }
+
+      .image-texte__content {
+        order: 1;
+      }
+    }
+  }
+
+  // Position de l'image à gauche (défaut)
+  &--gauche {
+    .image-texte__container {
+      @include breakpoints(md, max) {
+        .image-texte__image-wrapper {
+          order: 1;
+        }
+
+        .image-texte__content {
+          order: 2;
+        }
+      }
+    }
+  }
+}

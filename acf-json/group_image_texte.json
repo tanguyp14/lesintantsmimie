@@ -1,0 +1,208 @@
+{
+    "key": "group_image_texte",
+    "title": "Image - Texte - Champs",
+    "fields": [
+        {
+            "key": "field_image_texte_position",
+            "label": "Position de l'image",
+            "name": "position_image",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choisir la position de l'image par rapport au texte",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "gauche": "À gauche",
+                "droite": "À droite"
+            },
+            "default_value": "gauche",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_image_texte_image",
+            "label": "Image principale",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image principale du bloc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_image_texte_svg_derriere_1",
+            "label": "SVG décoratif derrière 1",
+            "name": "svg_derriere_1",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Premier SVG positionné derrière l'image (en haut à gauche)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_image_texte_svg_devant_1",
+            "label": "SVG décoratif devant 1",
+            "name": "svg_devant_1",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Premier SVG positionné devant l'image (en haut à droite)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_image_texte_svg_devant_2",
+            "label": "SVG décoratif devant 2",
+            "name": "svg_devant_2",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Deuxième SVG positionné devant l'image (en bas à gauche)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_image_texte_texte",
+            "label": "Texte",
+            "name": "texte",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Contenu texte du bloc (WYSIWYG)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_image_texte_bouton_texte",
+            "label": "Texte du bouton",
+            "name": "bouton_texte",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Texte à afficher sur le bouton",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Ex: En savoir plus",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_image_texte_bouton_lien",
+            "label": "Lien du bouton",
+            "name": "bouton_lien",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "URL vers laquelle le bouton renvoie",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/image-texte"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Image - Texte",
+    "show_in_rest": 0,
+    "display_title": ""
+}
