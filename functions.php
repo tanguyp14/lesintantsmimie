@@ -1,6 +1,7 @@
 <?php
 
 require_once 'inc-functions/cpt.php';
+require_once 'inc-functions/populate-instants.php';
 require_once 'inc-functions/register-menus.php';
 require_once 'inc-functions/register-styles.php';
 require_once 'inc-functions/register-scripts.php';

@@ -1,0 +1,34 @@
+.pattern-separator {
+    width: 100%;
+    height: var(--pattern-height, 100px);
+    background-image: var(--pattern-image);
+    background-repeat: repeat-x;
+    background-position: left center;
+    background-size: var(--pattern-width, auto) var(--pattern-height, 100px);
+
+    &.alignfull {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+    }
+
+    &.alignwide {
+        width: calc(100% + 4rem);
+        margin-left: -2rem;
+    }
+
+    // Preview vide dans l'editeur
+    &--empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        background: #f0f0f0;
+        border: 2px dashed #ccc;
+
+        p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+}

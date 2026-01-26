@@ -68,15 +68,24 @@ $svg_3 = $footer_options['svg_3'] ?? '';
 
         <!-- Menu -->
         <nav class="footer__nav">
-            <?php
-            wp_nav_menu([
-                'theme_location' => 'primary',
-                'container' => false,
-                'menu_class' => 'footer__menu',
-                'fallback_cb' => false,
-                'depth' => 1,
-            ]);
-            ?>
+           <?php
+           // Filtre temporaire pour supprimer les classes parasites
+           $remove_menu_classes = function($classes) { return []; };
+           $remove_menu_id = function($id) { return ''; };
+
+           add_filter('nav_menu_css_class', $remove_menu_classes, 100);
+           add_filter('nav_menu_item_id', $remove_menu_id, 100);
+
+           wp_nav_menu([
+               'theme_location' => 'primary',
+               'container' => false,
+               'menu_class' => 'footer__menu',
+               'depth' => 1,
+           ]);
+
+           remove_filter('nav_menu_css_class', $remove_menu_classes, 100);
+           remove_filter('nav_menu_item_id', $remove_menu_id, 100);
+           ?>
         </nav>
 
         <!-- Réseaux sociaux -->

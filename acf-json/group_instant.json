@@ -1,0 +1,92 @@
+{
+    "key": "group_instant",
+    "title": "Instant - Champs",
+    "fields": [
+        {
+            "key": "field_instant_icon",
+            "label": "Icone",
+            "name": "icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Icone de l'instant",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg,svg,webp",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_instant_page",
+            "label": "Page liee",
+            "name": "page",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "Page associee a cet instant",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_instant_description",
+            "label": "Description courte",
+            "name": "description_courte",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Courte description de l'instant",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 300,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "instant"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le CPT Instant",
+    "show_in_rest": 0,
+    "display_title": ""
+}

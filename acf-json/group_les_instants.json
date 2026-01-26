@@ -1,0 +1,158 @@
+{
+    "key": "group_les_instants",
+    "title": "Les Instants - Champs",
+    "fields": [
+        {
+            "key": "field_les_instants_titre",
+            "label": "Titre",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Les Instants Mimie",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_les_instants_description",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Chaque evenement est unique, tout comme vous.\n\nC'est pourquoi j'ai cree quatre univers distincts pour accompagner vos plus beaux moments. Que ce soit une celebration intime ou une grande fete, un instant d'evasion ou une aventure memorable, je suis la pour transformer votre vision en realite.",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_les_instants_tab_cta",
+            "label": "Section CTA",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_les_instants_titre_cta",
+            "label": "Titre CTA",
+            "name": "titre_cta",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Besoin d'un fil conducteur pour organiser votre evenement ?",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_les_instants_description_cta",
+            "label": "Description CTA",
+            "name": "description_cta",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Aide et accompagnement pour organiser un evenement.\nVous avez plein d'idees mais pas forcement le temps ou la clarte pour les concretiser ? Je suis la pour ca.\n\nOn discute, on affine ensemble, je trouve les bons prestataires et je gere tout l'administratif. Vous profitez de votre evenement, pas du stress.",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_les_instants_bouton_texte",
+            "label": "Texte du bouton",
+            "name": "bouton_texte",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "On en parle ?",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_les_instants_bouton_lien",
+            "label": "Lien du bouton",
+            "name": "bouton_lien",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "allow_archives": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/les-instants"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Les Instants",
+    "show_in_rest": 0,
+    "display_title": ""
+}

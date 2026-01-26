@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "acf/pattern-separator",
+    "title": "Separateur Pattern",
+    "description": "Bloc separateur avec image repetee en pattern",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M3 13h2v-2H3v2zm4 0h2v-2H7v2zm4 0h2v-2h-2v2zm4 0h2v-2h-2v2zm4 0h2v-2h-2v2z\"/></svg>",
+    "category": "tylt",
+    "keywords": [
+        "separateur",
+        "pattern",
+        "motif",
+        "decoration"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "view.php"
+    },
+    "style": "file:assets/css/style.css",
+    "supports": {
+        "align": ["full", "wide"],
+        "html": false,
+        "multiple": true
+    }
+}
