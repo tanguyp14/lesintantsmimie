@@ -48,7 +48,7 @@
 	$is_front_page = is_front_page();
 	?>
 
-	<header id="masthead" class="header <?php echo $is_front_page ? 'header--home' : ''; ?>" role="banner">
+	<header id="masthead" class="header <?php echo $is_front_page ? 'header--home' : 'header--scrolled'; ?>" role="banner">
 		<div class="header__container">
 
 			<div class="header__logo">

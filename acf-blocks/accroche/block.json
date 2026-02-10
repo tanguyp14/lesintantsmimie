@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "acf/accroche",
+    "title": "Accroche",
+    "description": "Bloc avec phrase d'accroche et SVG décoratif",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z\"/></svg>",
+    "category": "tylt",
+    "keywords": [
+        "accroche",
+        "phrase",
+        "citation",
+        "texte"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "view.php"
+    },
+    "style": "file:assets/css/style.css",
+    "supports": {
+        "align": ["full", "wide"],
+        "html": false,
+        "multiple": true
+    }
+}

@@ -1,0 +1,84 @@
+@import "../../../../src/scss/abstracts/all";
+
+.intro-presta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 70px 250px;
+
+  @include breakpoints(xl, max) {
+    gap: 60px;
+    padding: 70px 100px;
+  }
+
+  @include breakpoints(lg, max) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px;
+  }
+
+  @include breakpoints(md, max) {
+    padding: 40px 20px;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 447px;
+    height: 637px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    rotate: -3.4deg;
+
+    @include breakpoints(lg, max) {
+      width: 100%;
+      max-width: 447px;
+      height: 400px;
+    }
+
+    @include breakpoints(md, max) {
+      height: 300px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    max-width: 692px;
+  }
+
+  &__title {
+    font-family: $secondary-font-family;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.98;
+    color: $noir;
+    margin: 0;
+  }
+
+  &__text {
+    font-family: $primary-font-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.22;
+    color: $noir;
+
+    p {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include breakpoints(md, max) {
+      font-size: 16px;
+    }
+  }
+  .btn{
+    max-width: fit-content;
+  }
+}

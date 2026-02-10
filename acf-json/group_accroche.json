@@ -1,0 +1,70 @@
+{
+    "key": "group_accroche",
+    "title": "Accroche - Champs",
+    "fields": [
+        {
+            "key": "field_accroche_phrase",
+            "label": "Phrase d'accroche",
+            "name": "phrase",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "La phrase d'accroche à afficher (les retours à la ligne seront conservés)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Une parenthèse précieuse pour célébrer \nles instants qui comptent vraiment !",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_accroche_svg",
+            "label": "SVG décoratif",
+            "name": "svg",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "SVG décoratif affiché à droite du bloc (sera affiché à 30% d'opacité)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/accroche"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Accroche",
+    "show_in_rest": 0,
+    "display_title": ""
+}

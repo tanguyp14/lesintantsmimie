@@ -1,0 +1,26 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "acf/intro-presta",
+    "title": "Intro Presta",
+    "description": "Bloc d'introduction pour les pages de prestation avec image et texte",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9 8H5v2h4V8zm6 0h-4v2h4V8zm-6 4H5v2h4v-2zm6 0h-4v2h4v-2z\"/></svg>",
+    "category": "tylt",
+    "keywords": [
+        "intro",
+        "presta",
+        "prestation",
+        "image",
+        "texte"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "view.php"
+    },
+    "style": "file:assets/css/style.css",
+    "supports": {
+        "align": ["full", "wide"],
+        "html": false,
+        "multiple": false
+    }
+}

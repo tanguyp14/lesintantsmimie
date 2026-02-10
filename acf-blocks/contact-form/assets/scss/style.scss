@@ -1,0 +1,359 @@
+@import "../../../../src/scss/abstracts/all";
+
+.contact-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 250px;
+  background-color: $blanc;
+  background-size: 118%;
+  background-position: center center;
+  background-repeat: repeat;
+
+  // Dégradé blanc en bas du bloc
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    background: linear-gradient(to bottom, rgba($blanc, 0) 0%, rgba($blanc, 1) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  @include breakpoints(xl, max) {
+    padding: 80px 100px;
+  }
+
+  @include breakpoints(lg, max) {
+    padding: 60px 50px;
+  }
+
+  @include breakpoints(md, max) {
+    padding: 40px 20px;
+  }
+
+  // Container - carte blanche avec blur
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 51px;
+    padding: 50px;
+    background: rgba($blanc, 0.8);
+    backdrop-filter: blur(4px);
+    border: 3px solid $blanc;
+    border-radius: 5px;
+
+    @include breakpoints(lg, max) {
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    @include breakpoints(md, max) {
+      padding: 20px;
+    }
+  }
+
+  // Image
+  &__image-wrapper {
+    flex-shrink: 0;
+    width: 393px;
+    height: 579px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    @include breakpoints(lg, max) {
+      width: 100%;
+      height: 400px;
+    }
+
+    @include breakpoints(md, max) {
+      height: 300px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  // Contenu formulaire
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+
+    @include breakpoints(lg, max) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: $secondary-font-family;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.98;
+    color: $noir;
+    margin: 0;
+
+    @include breakpoints(md, max) {
+      font-size: 30px;
+      line-height: 1.4;
+    }
+  }
+
+  &__subtitle {
+    font-family: $primary-font-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.22;
+    color: $noir;
+    margin: 0 0 10px;
+
+    @include breakpoints(md, max) {
+      font-size: 16px;
+    }
+  }
+
+  &__notice {
+    font-family: $primary-font-family;
+    font-size: 14px;
+    color: #7b7b7b;
+    font-style: italic;
+    padding: 20px;
+    background: rgba($jaune, 0.1);
+    border: 1px dashed $jaune;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  // Formulaire
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__field {
+    width: 100%;
+
+    &--checkbox {
+      margin-top: 5px;
+    }
+  }
+
+  // Inputs
+  &__input {
+    width: 100%;
+    padding: 5px;
+    font-family: $primary-font-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.22;
+    color: $noir;
+    background: $blanc;
+    border: 1px solid $jaune;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &::placeholder {
+      color: #7b7b7b;
+      font-weight: 300;
+    }
+
+    &:focus {
+      border-color: darken($jaune, 10%);
+      box-shadow: 0 0 0 2px rgba($jaune, 0.2);
+    }
+
+    @include breakpoints(md, max) {
+      font-size: 16px;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23414141' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+    cursor: pointer;
+  }
+
+  &__textarea {
+    min-height: 187px;
+    resize: vertical;
+  }
+
+  // Checkbox - Style pour CF7
+  &__checkbox {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    flex-shrink: 0;
+    width: 21px !important;
+    height: 21px !important;
+    min-width: 21px;
+    min-height: 21px;
+    margin: 0 !important;
+    padding: 0;
+    background: $blanc;
+    border: 1px solid $jaune !important;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative !important;
+    opacity: 1 !important;
+    transition: all 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:checked {
+      background: $jaune;
+      border-color: $jaune !important;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid $blanc;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        display: block;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba($jaune, 0.2);
+    }
+
+    &:hover {
+      border-color: darken($jaune, 10%) !important;
+    }
+  }
+
+  // Bouton submit
+  &__submit {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 30px;
+    background: $jaune;
+    border: none;
+    border-radius: 68px;
+    font-family: $primary-font-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.22;
+    text-transform: uppercase;
+    color: $noir;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background: darken($jaune, 8%);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    @include breakpoints(md, max) {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  // Styles pour Contact Form 7
+  .wpcf7 {
+    width: 100%;
+
+    .wpcf7-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .wpcf7-form-control-wrap {
+      display: block;
+      width: 100%;
+    }
+
+    // Checkbox CF7 - Structure: .wpcf7-acceptance > .wpcf7-list-item > label > input + span
+    .wpcf7-acceptance {
+      .wpcf7-list-item {
+        margin: 0;
+        list-style: none;
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+        }
+      }
+
+      .wpcf7-list-item-label {
+        font-family: $primary-font-family;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 1.5;
+        color: #7b7b7b;
+        max-width: 344px;
+      }
+    }
+
+    // Messages de validation
+    .wpcf7-not-valid-tip {
+      font-family: $primary-font-family;
+      font-size: 12px;
+      color: #dc3545;
+      margin-top: 5px;
+    }
+
+    .wpcf7-response-output {
+      font-family: $primary-font-family;
+      font-size: 14px;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 15px 0 0;
+      text-align: center;
+    }
+
+    .wpcf7-validation-errors,
+    .wpcf7-acceptance-missing {
+      border-color: #dc3545;
+      background: rgba(220, 53, 69, 0.1);
+      color: #dc3545;
+    }
+
+    .wpcf7-mail-sent-ok {
+      border-color: #28a745;
+      background: rgba(40, 167, 69, 0.1);
+      color: #28a745;
+    }
+
+    // Spinner de chargement
+    .wpcf7-spinner {
+      margin-left: 10px;
+    }
+  }
+}

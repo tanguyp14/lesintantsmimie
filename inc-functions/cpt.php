@@ -40,13 +40,13 @@ function TYLT_register_instants_cpt() {
         'show_in_menu'       => true,
         'show_in_rest'       => true,
         'query_var'          => true,
-        'rewrite'            => ['slug' => 'instants'],
+        'rewrite'            => ['slug' => '/', 'with_front' => false],
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-heart',
-        'supports'           => ['title', 'thumbnail'],
+        'supports'           => ['title', 'thumbnail', 'editor'],
         'taxonomies'         => ['post_tag'],
     ];
 
@@ -76,3 +76,53 @@ function TYLT_redirect_posts_page() {
         exit;
     }
 }
+
+/**
+ * 3 - Fix pour les URLs des instants a la racine
+ */
+
+// Flush les rewrite rules quand necessaire
+add_action('init', 'TYLT_flush_rewrite_rules_once');
+function TYLT_flush_rewrite_rules_once() {
+    if (get_option('tylt_flush_rewrite_rules') !== 'done_v2') {
+        flush_rewrite_rules();
+        update_option('tylt_flush_rewrite_rules', 'done_v2');
+    }
+}
+
+// Permettre aux instants d'etre resolus a la racine
+add_filter('post_type_link', 'TYLT_instant_permalink', 10, 2);
+function TYLT_instant_permalink($post_link, $post) {
+    if ($post->post_type === 'instant') {
+        return home_url('/' . $post->post_name . '/');
+    }
+    return $post_link;
+}
+
+// Parser les URLs racine pour les instants
+add_action('pre_get_posts', 'TYLT_instant_query_fix');
+function TYLT_instant_query_fix($query) {
+    if (!is_admin() && $query->is_main_query() && !$query->is_home()) {
+        $name = $query->get('name');
+        $pagename = $query->get('pagename');
+
+        $slug = $name ?: $pagename;
+
+        if ($slug && !$query->get('post_type')) {
+            // Verifier si c'est un instant
+            global $wpdb;
+            $post_id = $wpdb->get_var($wpdb->prepare(
+                "SELECT ID FROM $wpdb->posts WHERE post_name = %s AND post_type = 'instant' AND post_status = 'publish'",
+                $slug
+            ));
+
+            if ($post_id) {
+                $query->set('post_type', 'instant');
+                $query->set('name', $slug);
+                $query->is_single = true;
+                $query->is_page = false;
+            }
+        }
+    }
+}
+

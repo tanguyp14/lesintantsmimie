@@ -173,8 +173,8 @@
             "label": "Lien du bouton",
             "name": "bouton_lien",
             "aria-label": "",
-            "type": "url",
-            "instructions": "URL vers laquelle le bouton renvoie",
+            "type": "text",
+            "instructions": "Ex: /#contact, /ma-page, https://example.com",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -183,7 +183,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "https://"
+            "maxlength": "",
+            "placeholder": "/#contact",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [

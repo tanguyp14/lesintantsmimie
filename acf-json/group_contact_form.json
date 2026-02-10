@@ -1,0 +1,143 @@
+{
+    "key": "group_contact_form",
+    "title": "Formulaire de Contact - Champs",
+    "fields": [
+        {
+            "key": "field_contact_form_titre",
+            "label": "Titre",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titre du formulaire",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "On en discute ?",
+            "maxlength": "",
+            "placeholder": "Ex: On en discute ?",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_form_sous_titre",
+            "label": "Sous-titre",
+            "name": "sous_titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Sous-titre du formulaire",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Discutons plus amplement de votre projet.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_form_image",
+            "label": "Image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image affichée à gauche du formulaire",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_contact_form_background",
+            "label": "Image de fond",
+            "name": "background_pattern",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image ou pattern de fond du bloc (optionnel)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_contact_form_cf7",
+            "label": "Formulaire Contact Form 7",
+            "name": "formulaire_cf7",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Sélectionnez le formulaire Contact Form 7 à afficher",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/contact-form"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Formulaire de Contact",
+    "show_in_rest": 0,
+    "display_title": ""
+}

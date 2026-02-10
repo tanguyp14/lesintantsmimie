@@ -1,0 +1,26 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "acf/presta",
+    "title": "Prestations",
+    "description": "Grille de prestations avec card CTA en dernier",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z\"/></svg>",
+    "category": "tylt",
+    "keywords": [
+        "presta",
+        "prestations",
+        "services",
+        "grille",
+        "cards"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "view.php"
+    },
+    "style": "file:assets/css/style.css",
+    "supports": {
+        "align": ["full", "wide"],
+        "html": false,
+        "multiple": true
+    }
+}

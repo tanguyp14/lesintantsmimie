@@ -1,0 +1,241 @@
+{
+    "key": "group_presta",
+    "title": "Prestations - Champs",
+    "fields": [
+        {
+            "key": "field_presta_titre",
+            "label": "Titre",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Ce qui vous attend",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_presta_sous_titre",
+            "label": "Sous-titre",
+            "name": "sous_titre",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_presta_cards",
+            "label": "Prestations",
+            "name": "cards",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Ajoutez vos prestations",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Ajouter une prestation",
+            "sub_fields": [
+                {
+                    "key": "field_presta_card_icon",
+                    "label": "Icône",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Icône SVG de la prestation",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_presta_card_titre",
+                    "label": "Titre",
+                    "name": "titre",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_presta_card_texte",
+                    "label": "Texte",
+                    "name": "texte",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_presta_tab_cta",
+            "label": "Card CTA",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_presta_cta_svg",
+            "label": "SVG décoratif",
+            "name": "cta_svg",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "SVG de fond pour la card CTA",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_presta_cta_titre",
+            "label": "Titre CTA",
+            "name": "cta_titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Envie d'en savoir plus ?",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_presta_cta_bouton_texte",
+            "label": "Texte du bouton",
+            "name": "cta_bouton_texte",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "On en parle ?",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_presta_cta_bouton_lien",
+            "label": "Lien du bouton",
+            "name": "cta_bouton_lien",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "/#contact",
+            "maxlength": "",
+            "placeholder": "/#contact"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/presta"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Prestations",
+    "show_in_rest": 0,
+    "display_title": ""
+}

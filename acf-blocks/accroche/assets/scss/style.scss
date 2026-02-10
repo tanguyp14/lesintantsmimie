@@ -1,0 +1,76 @@
+@import "../../../../src/scss/abstracts/all";
+
+.accroche {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 300px;
+  margin-top: 13vh;
+  margin-bottom: 13vh;
+  overflow: hidden;
+  
+
+  // SVG décoratif
+  &__svg {
+    grid-column: 1;
+    grid-row: 1;
+    position: absolute;
+    width: 100vw;
+    height: 50%;
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+      position: relative;
+      transform: rotate(90deg);
+      object-fit: cover;
+      width: auto;
+      height: 90vw;
+      max-height: 400px;
+
+      path,
+      g {
+        fill: $beige;
+      }
+    }
+  }
+
+  // Phrase d'accroche
+  &__phrase {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: $secondary-font-family;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 1.2;
+    text-align: center;
+    color: $noir;
+    margin: 0;
+    max-width: 1200px;
+
+    @include breakpoints(lg, max) {
+      font-size: 28px;
+      line-height: 1.6;
+    }
+
+    @include breakpoints(md, max) {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    @include breakpoints(sm, max) {
+      font-size: 18px;
+    }
+  }
+
+  // Caractères animés
+  &__char {
+    display: inline-block;
+    will-change: transform, opacity;
+  }
+}

@@ -1,6 +1,7 @@
 <?php
 
 require_once 'inc-functions/cpt.php';
+require_once 'inc-functions/ai1wpm-exclude-files.php';
 require_once 'inc-functions/populate-instants.php';
 require_once 'inc-functions/register-menus.php';
 require_once 'inc-functions/register-styles.php';

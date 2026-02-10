@@ -1,0 +1,135 @@
+// Header pour les pages single Instant
+.instant-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $beige;
+
+  @include breakpoints(md, max) {
+    height: 170px;
+  }
+
+  @include breakpoints(sm, max) {
+    height: 170px;
+  }
+
+  // Overlay jaune semi-transparent
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($jaune, 0.5);
+    z-index: 1;
+  }
+
+  // Titre
+  &__title {
+    position: relative;
+    z-index: 2;
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.22;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $blanc;
+    margin: 0;
+    padding: 0 20px 30px;
+
+    @include breakpoints(lg, max) {
+      font-size: 32px;
+    }
+
+    @include breakpoints(md, max) {
+      font-size: 26px;
+      padding-bottom: 20px;
+    }
+
+    @include breakpoints(sm, max) {
+      font-size: 20px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  // Navigation container
+  &__navigation {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    @include breakpoints(md, max) {
+      padding: 0 15px;
+      bottom: 10px;
+    }
+  }
+
+  // Navigation prev/next
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $blanc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    @include breakpoints(sm, max) {
+      display: none;
+    }
+
+    span {
+      font-family: $primary-font-family;
+      font-weight: 400;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $blanc;
+      line-height: 0;
+      &:visited {
+        color: $blanc;
+      }
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      stroke: $blanc;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &--prev:hover svg {
+      transform: translateX(-3px);
+    }
+
+    &--next:hover svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.middle-text {
+  align-items: center;
+  max-width: 900px;
+  justify-content: center;
+  margin: 0px auto 30px;
+  text-align: center;
+  padding: 20px;
+  font-family: $primary-font-family;
+  font-weight: 300;
+}
