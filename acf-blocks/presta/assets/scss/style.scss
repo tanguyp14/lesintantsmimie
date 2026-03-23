@@ -74,11 +74,11 @@
     align-items: flex-start;
     gap: 10px;
     padding: 20px;
-    min-height: 218px;
     background-color: $blanc;
     border: 1px solid $jaune;
     border-radius: 5px;
     text-align: left;
+    min-height: 150px;
 
     &--cta {
       position: relative;
@@ -138,10 +138,10 @@
     font-family: $secondary-font-family;
     font-weight: 400;
     font-size: 20px;
-    line-height: 1.98;
+    line-height: 1.5;
+    height: calc(16px * 2 * 1.5);
     color: $noir;
     margin: 0;
-    height: calc(20px * 2 * 1.98);
     display: flex;
     align-items: center;
 
@@ -159,7 +159,7 @@
     line-height: 1.22;
     color: $noir;
     margin: 0;
-    height: calc(16px * 2 * 1.22);
+    height: calc(16px * 3 * 1.22);
     display: flex;
     align-items: center;
   }

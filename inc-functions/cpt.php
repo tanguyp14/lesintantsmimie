@@ -99,30 +99,47 @@ function TYLT_instant_permalink($post_link, $post) {
     return $post_link;
 }
 
-// Parser les URLs racine pour les instants
-add_action('pre_get_posts', 'TYLT_instant_query_fix');
-function TYLT_instant_query_fix($query) {
-    if (!is_admin() && $query->is_main_query() && !$query->is_home()) {
-        $name = $query->get('name');
-        $pagename = $query->get('pagename');
-
-        $slug = $name ?: $pagename;
-
-        if ($slug && !$query->get('post_type')) {
-            // Verifier si c'est un instant
-            global $wpdb;
-            $post_id = $wpdb->get_var($wpdb->prepare(
-                "SELECT ID FROM $wpdb->posts WHERE post_name = %s AND post_type = 'instant' AND post_status = 'publish'",
-                $slug
-            ));
-
-            if ($post_id) {
-                $query->set('post_type', 'instant');
-                $query->set('name', $slug);
-                $query->is_single = true;
-                $query->is_page = false;
-            }
-        }
+// Parser les URLs racine pour les instants et les pages
+// On utilise le filtre 'request' (avant parse_query) pour intercepter les query vars brutes
+add_filter('request', 'TYLT_instant_query_fix');
+function TYLT_instant_query_fix($query_vars) {
+    // Le query_var du CPT 'instant' est présent quand la règle de réécriture a capturé l'URL
+    if (!isset($query_vars['instant']) && !isset($query_vars['name'])) {
+        return $query_vars;
     }
+
+    $slug = $query_vars['instant'] ?? $query_vars['name'] ?? '';
+
+    if (!$slug) {
+        return $query_vars;
+    }
+
+    global $wpdb;
+
+    // Les instants ont la priorité
+    $instant_id = $wpdb->get_var($wpdb->prepare(
+        "SELECT ID FROM $wpdb->posts WHERE post_name = %s AND post_type = 'instant' AND post_status = 'publish'",
+        $slug
+    ));
+
+    if ($instant_id) {
+        $query_vars['post_type'] = 'instant';
+        $query_vars['name']      = $slug;
+        unset($query_vars['instant'], $query_vars['pagename']);
+        return $query_vars;
+    }
+
+    // Pas un instant : vérifier si c'est une page
+    $page_id = $wpdb->get_var($wpdb->prepare(
+        "SELECT ID FROM $wpdb->posts WHERE post_name = %s AND post_type = 'page' AND post_status = 'publish'",
+        $slug
+    ));
+
+    if ($page_id) {
+        $query_vars['pagename'] = $slug;
+        unset($query_vars['instant'], $query_vars['name'], $query_vars['post_type']);
+    }
+
+    return $query_vars;
 }
 
