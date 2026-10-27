@@ -1,0 +1,204 @@
+{
+    "key": "group_concours",
+    "title": "Concours - Champs",
+    "fields": [
+        {
+            "key": "field_concours_surtitre",
+            "label": "Surtitre",
+            "name": "surtitre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Forum Périnatalité & Petite Enfance",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_concours_titre",
+            "label": "Titre",
+            "name": "titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Tentez de gagner une urne personnalisée",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_concours_infos_evenement",
+            "label": "Date et lieu",
+            "name": "infos_evenement",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Affiché sous le titre",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "7 et 8 novembre 2026 • Salle Polyvalente, 9 rue de la Résistance, Soliers (14)",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_concours_description_lot",
+            "label": "Description du lot",
+            "name": "description_lot",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Présentation du lot et modalités (date du tirage au sort...)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<p>À l'occasion du Forum Périnatalité &amp; Petite Enfance, Les Instants Mimie vous fait gagner une urne personnalisée pour recueillir les enveloppes d'anniversaire de votre enfant.</p><p>Remplissez le formulaire pour participer au tirage au sort !</p>",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_concours_image_lot",
+            "label": "Photo du lot",
+            "name": "image_lot",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Photo de l'urne à gagner",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_concours_background",
+            "label": "Image de fond",
+            "name": "background_pattern",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image ou pattern de fond du bloc (optionnel)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_concours_cf7",
+            "label": "Formulaire Contact Form 7",
+            "name": "formulaire_cf7",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Formulaire de participation",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_concours_reglement",
+            "label": "Règlement du concours",
+            "name": "reglement",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Affiché sous le formulaire dans un encart dépliable",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/concours"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le bloc Concours",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1793102727
+}

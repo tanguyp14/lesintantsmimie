@@ -1,0 +1,99 @@
+@import "../../../../src/scss/abstracts/all";
+
+// La mise en page vient du bloc contact-form (acf-contact-form-style), seules les spécificités du concours sont ici
+.concours {
+  &__image-wrapper {
+    position: relative;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    padding: 5px 20px;
+    background: $jaune;
+    border-radius: 68px;
+    font-family: $secondary-font-family;
+    font-size: 18px;
+    color: $blanc;
+  }
+
+  &__surtitre {
+    font-family: $primary-font-family;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $jaune;
+    margin: 0;
+  }
+
+  // Titre plus long que "On en discute ?"
+  .contact-form__title {
+    line-height: 1.4;
+
+    @include breakpoints(md, max) {
+      font-size: 26px;
+    }
+  }
+
+  &__evenement {
+    font-family: $primary-font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: $noir;
+    margin: 0;
+  }
+
+  &__description {
+    font-family: $primary-font-family;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $noir;
+    margin-bottom: 10px;
+
+    p {
+      margin: 0 0 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__reglement {
+    font-family: $primary-font-family;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #7b7b7b;
+
+    summary {
+      cursor: pointer;
+      text-decoration: underline;
+
+      &:hover {
+        color: $noir;
+      }
+    }
+  }
+
+  &__reglement-texte {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 10px;
+
+    h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: $noir;
+      margin: 15px 0 5px;
+    }
+
+    p {
+      margin: 0 0 5px;
+    }
+  }
+}
